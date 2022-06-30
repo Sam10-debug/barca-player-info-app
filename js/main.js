@@ -32,13 +32,16 @@ function grabDetails(){
 	console.log(9)
 	first.classList.add("hidden")
 	second.classList.remove("hidden")
+	backBtn.classList.remove("hidden")
+	
 }
 submit.addEventListener("click",grabDetails)
 backBtn.addEventListener("click",back)
 function back(){
 	first.classList.remove("hidden")
 	second.classList.add("hidden")
-	console.log(8)
+	backBtn.classList.add("hidden")
+	
 }
 
 
@@ -58,13 +61,14 @@ input.addEventListener("keypress", function(event) {
 		  image.src=data.img
 		  backgroundName.textContent=data.name
 		  backgroundNumber.textContent=data.squad_number
-	  })
-	  .catch(err=>console.log(err))
-	  console.log(9)
-	  first.classList.add("hidden")
-	  second.classList.remove("hidden")
-	  event.preventDefault();
-	  // Trigger the button element with a click
-	  document.getElementById("submit").click();
+		})
+		.catch(err=>console.log(err))
+		console.log(9)
+		first.classList.add("hidden")
+		second.classList.remove("hidden")
+		event.preventDefault();
+		// Trigger the button element with a click
+		document.getElementById("submit").click();
+		
 	}
   });

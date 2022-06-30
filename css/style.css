@@ -35,6 +35,12 @@ form{
 	justify-content: center;
 	align-items: center;
 }
+.back.active{
+	display: flex;
+}
+.back.unactive{
+	display: hidden;
+}
 input{
 font-size: 1.7rem;
 width: 90%;
